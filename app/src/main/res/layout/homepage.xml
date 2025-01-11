@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".HomepageActivity">
+
+    <!-- Search Bar -->
+    <EditText
+        android:id="@+id/searchBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Adidas Up to 50%"
+        android:padding="12dp"
+        android:drawableStart="@drawable/search"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="16dp"
+        android:background="@color/grey"/>
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kamu ingin belanja apa?"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:layout_below="@id/searchBar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Brand Options -->
+    <LinearLayout
+        android:id="@+id/brandOptions"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:orientation="horizontal"
+        android:layout_below="@id/tvTitle"
+        android:layout_marginBottom="50dp"
+        android:background="@color/green">
+
+        <ImageView
+            android:id="@+id/btnAdidas"
+            android:layout_width="154dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="16dp"
+            android:background="@color/grey"
+            android:src="@drawable/adidas_2_logo" />
+
+
+        <ImageView
+            android:id="@+id/btnNike"
+            android:layout_width="154dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="16dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Nike"
+            android:src="@drawable/nike_4_logo_svgrepo_com"
+            android:backgroundTint="@color/grey"/>
+
+        <ImageView
+            android:id="@+id/btnPuma"
+            android:layout_width="154dp"
+            android:layout_height="match_parent"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Puma"
+            android:src="@drawable/symbole_puma" />
+    </LinearLayout>
+
+    <!-- Recommendations Section -->
+    <TextView
+        android:id="@+id/tvRecommendations"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kamu Mungkin Juga Suka"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:layout_below="@id/brandOptions"
+        android:layout_marginBottom="16dp" />
+
+    <LinearLayout
+        android:id="@+id/recommendations"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/tvRecommendations"
+        android:background="@color/green">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginEnd="16dp">
+
+            <ImageView
+                android:id="@+id/imgAdidasShoe"
+                android:layout_width="150dp"
+                android:layout_height="130dp"
+                android:contentDescription="Adidas Liverpool Shoes"
+                android:src="@drawable/adidas_liverpool" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Adidas Liverpool Shoes"
+                android:textSize="14sp"
+                android:gravity="center_horizontal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginEnd="16dp">
+
+            <ImageView
+                android:id="@+id/imgAdidasTracktop"
+                android:layout_width="150dp"
+                android:layout_height="130dp"
+                android:contentDescription="Adidas Tracktop Blue"
+                android:src="@drawable/adidas_tracktop" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Adidas Tracktop Blue"
+                android:textSize="14sp"
+                android:gravity="center_horizontal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imgNikeShoe"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:src="@drawable/nike_mercurial"
+                android:contentDescription="Nike Mercurial Shoes" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nike Mercurial Shoes"
+                android:textSize="14sp"
+                android:gravity="center_horizontal" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Bottom Navigation -->
+    <LinearLayout
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:background="@color/grey"
+        android:padding="8dp">
+
+        <ImageButton
+            android:id="@+id/navHome"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/home"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Home" />
+
+        <ImageButton
+            android:id="@+id/navCategories"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/kategori"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Categories"
+            android:layout_marginStart="16dp" />
+
+        <ImageButton
+            android:id="@+id/navBag"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/tas"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Bag"
+            android:layout_marginStart="16dp" />
+
+        <ImageButton
+            android:id="@+id/navWishlist"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/whislist"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Wishlist"
+            android:layout_marginStart="16dp" />
+
+        <ImageButton
+            android:id="@+id/navAccount"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/akun"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="My Account"
+            android:layout_marginStart="16dp" />
+    </LinearLayout>
+</RelativeLayout>
